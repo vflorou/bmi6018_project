@@ -17,9 +17,6 @@ ClinicalDataDf=pd.read_csv('/Users/Vaia/Desktop/BMI_6018_Project/bmi6018_project
 df=ClinicalDataDf[['gender', 'race', 'age_at_initial_pathologic_diagnosis',
 'ethnicity','pathologic_stage','weight', 'height']]
 
-df=ClinicalDataDf[['gender', 'race', 'age_at_initial_pathologic_diagnosis',
-'ethnicity','pathologic_stage', 'weight', 'height']]
-
 #Drop the first row
 df= df.drop([df.index[0]])
 
@@ -34,7 +31,7 @@ print(Stage)
 
 #Build a graph of stage and frequency and then embed it in a tkinter window 
 def plot():
-    fig=plt.figure()     # creat the maplotlib graph 
+    fig=plt.figure()     # create the maplotlib graph 
     x=Stage.keys()
     y=Stage.values()
     plt.bar(x,y)
@@ -57,6 +54,6 @@ plot_button = Button(master = window,
                      command = plot, 
                      height = 2,  
                      width = 10, 
-                     text = "Show the graph") 
+                     text = "Show the graph!") 
 plot_button.pack() 
 window.mainloop() 

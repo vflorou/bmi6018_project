@@ -1,7 +1,6 @@
 import pandas as pd 
 import csv
 import tkinter as tk 
-from tkinter import *
 import pandastable
 from pandastable import Table, TableModel
 
@@ -9,14 +8,15 @@ from pandastable import Table, TableModel
 #skip bad lines 
 #read_file.to_csv (r'/Users/Vaia/Desktop/BMI_6018_Project/bmi6018_project/data/ClinicalData.csv')
 
-#create pandas dataframe 
+#Create the Pandas dataframe
+
 ClinicalDataDf=pd.read_csv('/Users/Vaia/Desktop/BMI_6018_Project/bmi6018_project/data/AllData.txt', delimiter='\t',error_bad_lines=False, sep='Wt', header=1 )
 
 #see the shape of the DF (columns and rows)
 print(ClinicalDataDf.shape)
 
 #See the columns of the DF
-print(ClinicalDataDf.columns,  sep="\n")
+print(ClinicalDataDf.columns, sep='\n')
 
 #Edit the columns of the dataframe
 EditedClinicalData=ClinicalDataDf[[ 'bcr_patient_barcode', 'histological_type','gender', 

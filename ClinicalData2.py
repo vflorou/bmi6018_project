@@ -1,10 +1,8 @@
 import pandas as pd 
 import csv
 import tkinter as tk 
-from tkinter import *
 import pandastable
 from pandastable import Table, TableModel
-
 
 
 #create pandas dataframe 
@@ -32,10 +30,10 @@ print (GroupB.shape)
 print (GroupC.shape)
 print (GroupD.shape)
 
-
 grouped_df= EditedClinicalData.loc[(EditedClinicalData['age_at_initial_pathologic_diagnosis'] > '65') & (EditedClinicalData['gender'] == 'MALE') | (EditedClinicalData['age_at_initial_pathologic_diagnosis'] <'65') & (EditedClinicalData['gender'] == 'MALE') | (EditedClinicalData['age_at_initial_pathologic_diagnosis'] >'65') & (EditedClinicalData['gender'] == 'FEMALE') | (EditedClinicalData['age_at_initial_pathologic_diagnosis'] <'65') & (EditedClinicalData['gender'] == 'FEMALE')]
 print (grouped_df)
 
+#Find the index of the missing values
 #Remove Not Available values in weight and height 
 
 indexNamesW=grouped_df[ grouped_df ['weight']== '[Not Available]'].index
